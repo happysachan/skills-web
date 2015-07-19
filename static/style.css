@@ -1,0 +1,16 @@
+input {
+	background-color: yellow;
+}
+
+#lastname {
+	font-weight: bold;
+}
+
+span {
+	text-decoration: line-through;
+}
+
+
+#instruction {
+	border: black solid 2px
+}

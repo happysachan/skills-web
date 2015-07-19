@@ -1,0 +1,29 @@
+<!DOCTYPE>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="/static/style.css">
+	<title>app</title>	
+</head>
+<body>
+	<h1>Welcome to the Dream Job Application Site!</h1>
+	<p id="instruction">Instructions:<br>
+		Please fill out the below information to be matched to your dream job.</p>
+	<form action="/application" method="post">
+		<h3>Dream Job Application</h3><br>
+		First Name
+		<input type="text" name="firstname"><br>
+		Last Name
+		<input type="text" name="lastname" id="lastname"><br>
+		Salary Requirement
+		<input type="text" name="salary"><br>
+		Job
+		<select name="job">
+			<option value="Software Engineer">Software Engineer</option>
+			<option value="Qa Engineer">QA Engineer</option>
+			<option value="Product Manager">Product Manager</option>
+		</select><br>
+		<input type="submit">
+	</form>
+
+</body>
+</html>
