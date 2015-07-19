@@ -96,8 +96,17 @@
 <input type="button" value="Show Me a Popup!" id="popup-alert-button">
 </fieldset>
 
+<script src="https://code.jquery.com/jquery.js"></script>
+
+
 <script>
-  // code here for above problem
+function alertClick(evt) {
+  alert("Stop clicking me!");
+}
+var button1 = document.getElementById("popup-alert-button")
+
+button1.addEventListener('click', alertClick)
+
 </script>
 
 
@@ -115,7 +124,14 @@
 </fieldset>
 
 <script>
-  // code here for above-problem
+var button2 = document.getElementById("change-hello-to-goodbye-button")
+
+function helloGoodbye(evt) {
+  var messageChange = document.getElementById('message-to-change');
+  messageChange.innerText = "goodbye";
+}
+button2.addEventListener('click', helloGoodbye)
+
 </script>
 
 <div class="hint">
@@ -144,7 +160,16 @@
 </fieldset>
 
 <script>
-  // code here for above problem
+var button3 = document.getElementById("prevent-form-submission-form")
+
+function preventSubmission(evt) {
+  evt.preventDefault()
+  alert("Hiiiii")
+}
+
+button3.addEventListener('click', preventSubmission)
+
+
 </script>
 
 <div class="hint">
@@ -174,22 +199,19 @@
 </fieldset>
 
 <script>
-//  Here's a stub of a function you can use!
+ function reverseString() {
+   var msg = "Porcupines are cute";
 
-//  function reverseString() {
-//    var msg = "Porcupines are cute";
-//
-//    // do some stuff here to reverse that string into a new variable
-//    var newMsg = "This should be the reversed string";
-//
-//    alert(newMsg);
-//  }
+   function reverse(string) {
+      return string.split('').reverse().join('');
+   }
+   var newMsg = reverse(msg);
 
-// Here's a stub of event stuff you could use
-//
+   alert(newMsg);
+ }
 
-//  var button = document.getElementById('reverse-string-button');
-//  button.addEventListener('click', reverseString);
+ var button = document.getElementById('reverse-string-button');
+ button.addEventListener('click', reverseString);
 </script>
 
 
@@ -213,7 +235,8 @@
 </fieldset>
 
 <script>
-  // code here for above problem
+$('.tricky-to-find').on('click',alertClick)
+
 </script>
 
 <div class="hint">
@@ -240,7 +263,9 @@
 </fieldset>
 
 <script>
-  // put your code here
+$('#kittenz-rule').on('click',function(){$(this).attr('src','http://offleashk9training.com/dogtrainingblog/wp-content/uploads/2014/04/Sweet-puppy-with-bunny-puppies-14749075-1600-1200.jpg')})
+
+
 </script>
 
 <div class="hint">
@@ -273,7 +298,9 @@
 </fieldset>
 
 <script>
-  // put your code here
+$('#make-a-porcupine').on('click', function() {setTimeout(function(){$('#cute-porcupine-image').fadeIn(3000);},1000)} )
+
+
 </script>
 
 <div class="hint">
@@ -301,11 +328,18 @@
            id="favorite-food-input">
     <input type="submit" value="I'm Very Agreeable">
   </form>
-  <div id="agreeable-text"></div>
+  <div id="agreeable-text">here</div>
 </fieldset>
 
 <script>
-  // put your code here
+function preventSubmission2(evt) {
+  evt.preventDefault()
+}
+
+
+$('#agreeable-form').on('click', preventSubmission2)
+
+
 </script>
 
 <div class="hint">
