@@ -328,16 +328,19 @@ $('#make-a-porcupine').on('click', function() {setTimeout(function(){$('#cute-po
            id="favorite-food-input">
     <input type="submit" value="I'm Very Agreeable">
   </form>
-  <div id="agreeable-text">here</div>
+  <div id="agreeable-text"></div>
 </fieldset>
 
 <script>
-function preventSubmission2(evt) {
+function favoriteFood(evt) {
   evt.preventDefault()
+  var favFood = $('#favorite-food-input').val()
+  $('#agreeable-text').html(favFood) 
+
 }
 
 
-$('#agreeable-form').on('click', preventSubmission2)
+$('#agreeable-form').on('click', favoriteFood)
 
 
 </script>
