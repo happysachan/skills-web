@@ -200,14 +200,14 @@ button3.addEventListener('click', preventSubmission)
 
 <script>
  function reverseString() {
-   var msg = "Porcupines are cute";
+   var msg = prompt("I hungry for string to reverse, gimme!");
 
    function reverse(string) {
       return string.split('').reverse().join('');
    }
    var newMsg = reverse(msg);
 
-   alert(newMsg);
+   alert('BLEHHH: ' + newMsg);
  }
 
  var button = document.getElementById('reverse-string-button');
@@ -335,12 +335,12 @@ $('#make-a-porcupine').on('click', function() {setTimeout(function(){$('#cute-po
 function favoriteFood(evt) {
   evt.preventDefault()
   var favFood = $('#favorite-food-input').val()
-  $('#agreeable-text').html(favFood) 
+  $('#agreeable-text').html('I like ' + favFood + ', too.') 
 
 }
 
 
-$('#agreeable-form').on('click', favoriteFood)
+$('#agreeable-form').on('submit', favoriteFood)
 
 
 </script>
